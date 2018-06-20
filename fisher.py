@@ -1,23 +1,10 @@
-from flask import Flask, make_response
-from helper import is_isbn_or_key
+from flask import Flask
 
 app = Flask(__name__)
 app.config.from_object('config')
 
+from app.web import book
 
-@app.route('/book/search/<q>/<page>')
-def search(q,page):
-    '''
-        q:普通关键字
-        page
-    :return:
-    '''
-
-    isbn_or_key = is_isbn_or_key(q)
-
-
-    pass
-
-
+#第三章完结版本，循环引用bug
 if __name__ == '__main__':
     app.run()

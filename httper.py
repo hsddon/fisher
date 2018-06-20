@@ -2,7 +2,7 @@ import requests
 
 
 class HTTP:
-    @staticmethod
+    @classmethod
     def get(self,url,return_json=True):
         r = requests.get(url)   #r是此次http请求结果的封装对象
 
